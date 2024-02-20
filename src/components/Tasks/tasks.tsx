@@ -1,14 +1,15 @@
 import React, {useState} from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { styles } from './tasksStyles';
-import { AntDesign, Entypo, Ionicons } from '@expo/vector-icons';
+import { AntDesign, Entypo, Ionicons  } from '@expo/vector-icons';
 
 
 type Props = {
   tarefa: String;
+  onRemove: () => void;
 }
 
-export function Tasks({tarefa}: Props) {
+export function Tasks({tarefa, onRemove}: Props) {
   const [toggleCheckBox, setToggleCheckBox] = useState(false)
   // const [isSelected, setSelection] = useState(false);
 
@@ -24,7 +25,7 @@ export function Tasks({tarefa}: Props) {
 
         <Text style={styles.text}>{ tarefa }</Text>
 
-        <Ionicons name="trash-outline" size={24} color="black" />
+        <Ionicons name="trash-outline" size={30} color="black" onPress={onRemove} />
 
       </View>
     </View>

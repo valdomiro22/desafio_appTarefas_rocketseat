@@ -9,11 +9,11 @@ export const styles = StyleSheet.create({
   },
   content: {
     flexDirection: 'row',
-    height: 60,
+    height: 55,
     alignItems: 'center',
     justifyContent: 'space-between',
     marginStart: 10,
-    marginEnd: 10
+    marginEnd: 30
   },
   areaCheckBox: {
 
